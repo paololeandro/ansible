@@ -1,6 +1,6 @@
-# Ansible Arch Dev Machine
+# Ansible Arch Linux
 
-This playbook and role aims to setup my personal dev machine running arch linux.
+This playbook and role aims to setup my personal running arch linux.
 
 The following steps are required prior to the execution of the playbook
 
@@ -28,9 +28,7 @@ ssh_banner_enabled: true    # enable ssh banner on login             [true/false
 ssh_banner_text: Arch Linux # banner text for ssh session            [default:hostname]
 git_name: User Name         # same as git config --global user.name
 git_email: user@email.com   # same as git config --global user.email
-virtual_machine: true       # install and secure qemu-guest-agent    [true/false]
 desktop_environment: true   # install desktop environment            [true/false]
-ghostty_install: true       # install ghostty (beta access)          [true/false]
 ```
 
 Check also [archlinux.yml](archlinux.yml) to configure your `become_user`
