@@ -37,6 +37,7 @@ utilities_packages:
   - fastfetch
   - exa
   - bat
+  - tree
   - zathura
   - zathura-pdf-mupdf
   - imagemagick
