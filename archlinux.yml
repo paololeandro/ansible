@@ -1,0 +1,8 @@
+---
+- name: deploy archlinux
+  hosts:
+    - archlinux
+  become: true
+  become_user: paolo
+  roles:
+    - archlinux

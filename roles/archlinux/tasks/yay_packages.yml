@@ -1,0 +1,8 @@
+---
+- name: Install Software with YAY
+  yay:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop: "{{ yay_packages }}"
+  become: true

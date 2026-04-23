@@ -1,0 +1,81 @@
+---
+- name: sync dotfiles
+  ansible.builtin.git:
+    # repo: git@github.com:paololeandro/dotfiles.git
+    repo: https://github.com/paololeandro/dotfiles.git
+    dest: '/home/{{ ansible_user_id}}/dotfiles'
+    update: true
+    force: true
+    depth: 1
+
+- name: stow foot
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow foot
+    creates: '/home/{{ ansible_user_id }}/.config/foot/foot.ini'
+
+- name: stow sway
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow sway
+    creates: '/home/{{ ansible_user_id }}/.config/sway/config'
+
+- name: stow waybar
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow waybar
+    creates: '/home/{{ ansible_user_id }}/.config/waybar/'
+
+- name: stow wofi
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow wofi
+    creates: '/home/{{ ansible_user_id }}/.config/wofi/'
+
+- name: stow swaylock
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow swaylock
+    creates: '/home/{{ ansible_user_id }}/.config/swaylock/config'
+
+- name: stow mako
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow mako
+    creates: '/home/{{ ansible_user_id }}/.config/mako/config'
+
+- name: stow ranger
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow ranger
+    creates: '/home/{{ ansible_user_id }}/.config/ranger/rc.conf'
+
+- name: stow zathura
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow zathura
+    creates: '/home/{{ ansible_user_id }}/.config/zathura/zathurarc'
+
+- name: stow mangohud
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow mangohud
+    creates: '/home/{{ ansible_user_id }}/.config/MangoHud/MangoHud.conf'
+
+- name: Stow neovim
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow nvim
+    creates: '/home/{{ ansible_user_id }}/.config/nvim/'
+
+- name: Stow wallpapers
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow wallpapers
+    creates: '/home/{{ ansible_user_id }}/wallpapers/'
+
+- name: Stow scripts
+  ansible.builtin.command:
+    chdir: '/home/{{ ansible_user_id}}/dotfiles'
+    cmd: stow scripts
+    creates: '/home/{{ ansible_user_id }}/scripts/'

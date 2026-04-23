@@ -1,0 +1,59 @@
+---
+desktop_packages:
+  - sway
+  - waybar
+  - swayidle
+  - swaylock
+  - swaybg
+  - xorg-xwayland
+  - wofi
+  - mako
+  - foot
+  - zsh
+  - libnotify
+  - lxsession
+  - openssh
+  - firefox
+  - virtualbox
+  - xdg-desktop-portal-wlr
+  - xdg-user-dirs
+  - gnome-themes-extra
+  - nwg-look
+
+pacman_packages:
+  - base-devel
+  - curl
+  - git
+
+gaming_packages:
+  - steam
+  - discord
+  - mangohud
+  - mesa-utils
+
+utilities_packages:
+  - neovim
+  - tmux
+  - fastfetch
+  - exa
+  - bat
+  - zathura
+  - zathura-pdf-mupdf
+  - imagemagick
+  - grim
+  - slurp
+  - satty
+  - wl-clipboard
+  - nvtop
+  - bot
+  - amdgpu_top
+  - corectrl
+  - cups
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
+
+yay_packages:
+  - mesa-git
+  - lib32-mesa-git
+  - ranger-git
+  - epson-inkjet-printer-escpr
