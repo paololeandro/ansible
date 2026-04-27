@@ -19,6 +19,7 @@ desktop_packages:
   - xdg-user-dirs
   - gnome-themes-extra
   - nwg-look
+  - ttf-jetbrains-mono-nerd
 
 pacman_packages:
   - base-devel
