@@ -47,7 +47,7 @@ utilities_packages:
   - satty
   - wl-clipboard
   - nvtop
-  - bot
+  - stow
   - amdgpu_top
   - corectrl
   - cups
